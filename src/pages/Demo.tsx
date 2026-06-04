@@ -80,7 +80,7 @@ const walkthrough = [
 
 export function Demo() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-hidden">
       {/* Hero */}
       <section className="relative pt-12 pb-16 sm:pt-20 sm:pb-24 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
@@ -107,7 +107,7 @@ export function Demo() {
                 href="https://pos.103.145.37.138.sslip.io"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center justify-center gap-2 h-13 px-7 rounded-xl text-[15px] font-semibold text-white bg-[hsl(var(--primary))] hover:opacity-90 transition-all duration-300"
+                className="group inline-flex items-center justify-center gap-2 h-[52px] px-7 rounded-xl text-[15px] font-semibold text-white bg-[hsl(var(--primary))] hover:opacity-90 transition-all duration-300"
               >
                 <ExternalLink className="w-4 h-4" />
                 Open Live Demo
@@ -117,7 +117,7 @@ export function Demo() {
                 href="https://github.com/saurabhwebdev/swiftbill"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 h-13 px-7 rounded-xl text-[15px] font-semibold text-foreground border border-border hover:border-foreground/25 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 h-[52px] px-7 rounded-xl text-[15px] font-semibold text-foreground border border-border hover:border-foreground/25 transition-all duration-300"
               >
                 View Source Code
               </a>
@@ -262,7 +262,7 @@ export function Demo() {
                 href="https://pos.103.145.37.138.sslip.io"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center justify-center gap-2 h-13 px-8 rounded-xl text-[15px] font-semibold text-white bg-[hsl(var(--primary))] hover:opacity-90 transition-all"
+                className="group inline-flex items-center justify-center gap-2 h-[52px] px-8 rounded-xl text-[15px] font-semibold text-white bg-[hsl(var(--primary))] hover:opacity-90 transition-all"
               >
                 <Play className="w-4 h-4" />
                 Launch Demo

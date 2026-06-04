@@ -98,7 +98,7 @@ We do not use any analytics platforms, advertising networks, or customer trackin
 
 export function Privacy() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-hidden">
       <section className="relative pt-12 pb-16 sm:pt-20 sm:pb-24">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[radial-gradient(ellipse,hsl(var(--primary)/0.06)_0%,transparent_70%)]" />

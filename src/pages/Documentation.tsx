@@ -163,7 +163,7 @@ export function Documentation() {
   )
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-hidden">
       {/* Hero */}
       <section className="relative pt-12 pb-16 sm:pt-20 sm:pb-24">
         <div className="absolute inset-0 pointer-events-none">
@@ -195,7 +195,7 @@ export function Documentation() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search guides..."
-                className="w-full h-13 pl-12 pr-4 rounded-2xl border border-border bg-card text-[15px] text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-[hsl(var(--primary)/0.5)] focus:ring-2 focus:ring-[hsl(var(--primary)/0.08)] transition-all"
+                className="w-full h-[52px] pl-12 pr-4 rounded-2xl border border-border bg-card text-[15px] text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-[hsl(var(--primary)/0.5)] focus:ring-2 focus:ring-[hsl(var(--primary)/0.08)] transition-all"
               />
             </div>
           </Reveal>

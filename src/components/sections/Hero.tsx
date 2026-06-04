@@ -82,7 +82,7 @@ function MacBookSlider() {
       onMouseLeave={() => setIsAutoPlaying(true)}
     >
       {/* MacBook Pro */}
-      <div className="relative mx-auto">
+      <div className="relative mx-auto overflow-hidden">
         {/* Lid / display assembly */}
         <div
           className="relative rounded-[12px] p-[8px] sm:p-[10px]"
@@ -209,18 +209,20 @@ function MacBookSlider() {
       </div>
 
       {/* Dot indicators */}
-      <div className="flex items-center justify-center gap-1.5 mt-6">
+      <div className="flex items-center justify-center gap-0.5 mt-6">
         {screenshots.map((_, i) => (
           <button
             key={i}
             onClick={() => goTo(i, i > current ? 1 : -1)}
-            className={`h-1.5 rounded-full transition-all duration-300 ${
+            className="relative flex items-center justify-center w-8 h-8"
+            aria-label={`Go to ${screenshots[i].label}`}
+          >
+            <span className={`block h-1.5 rounded-full transition-all duration-300 ${
               i === current
                 ? 'w-6 bg-[hsl(var(--primary))]'
                 : 'w-1.5 bg-foreground/15 hover:bg-foreground/30'
-            }`}
-            aria-label={`Go to ${screenshots[i].label}`}
-          />
+            }`} />
+          </button>
         ))}
       </div>
     </div>

@@ -278,7 +278,7 @@ export function ApiReference() {
   const [openEndpoint, setOpenEndpoint] = useState<string | null>(null)
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-hidden">
       {/* Hero */}
       <section className="relative pt-12 pb-16 sm:pt-20 sm:pb-24">
         <div className="absolute inset-0 pointer-events-none">
