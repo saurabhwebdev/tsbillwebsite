@@ -31,6 +31,8 @@ const fadeUp = {
   },
 }
 
+const elasticEase = [0.25, 1.05, 0.44, 0.98] as const
+
 function MacBookSlider() {
   const [current, setCurrent] = useState(0)
   const [direction, setDirection] = useState(0)
@@ -56,9 +58,21 @@ function MacBookSlider() {
   }, [isAutoPlaying, next])
 
   const slideVariants = {
-    enter: (dir: number) => ({ x: dir > 0 ? '100%' : '-100%', opacity: 0 }),
-    center: { x: 0, opacity: 1 },
-    exit: (dir: number) => ({ x: dir > 0 ? '-100%' : '100%', opacity: 0 }),
+    enter: (dir: number) => ({
+      x: dir > 0 ? '80%' : '-80%',
+      scale: 0.95,
+      opacity: 1,
+    }),
+    center: {
+      x: 0,
+      scale: 1,
+      opacity: 1,
+    },
+    exit: (dir: number) => ({
+      x: dir > 0 ? '-80%' : '80%',
+      scale: 0.95,
+      opacity: 0.5,
+    }),
   }
 
   return (
@@ -68,7 +82,7 @@ function MacBookSlider() {
       onMouseLeave={() => setIsAutoPlaying(true)}
     >
       {/* MacBook body */}
-      <div className="relative mx-auto" style={{ maxWidth: 680 }}>
+      <div className="relative mx-auto">
         {/* Screen bezel */}
         <div className="relative rounded-t-xl bg-[#1a1a1a] p-[6px] pb-[4px] shadow-2xl ring-1 ring-white/[0.08]">
           {/* Camera notch */}
@@ -77,8 +91,8 @@ function MacBookSlider() {
           </div>
 
           {/* Screen */}
-          <div className="relative rounded-lg overflow-hidden bg-[#0f0f0f] aspect-[16/10]">
-            <AnimatePresence initial={false} custom={direction} mode="popLayout">
+          <div className="relative rounded-lg overflow-hidden bg-white dark:bg-[#0f0f0f] aspect-[16/10]">
+            <AnimatePresence initial={false} custom={direction} mode="sync">
               <motion.img
                 key={current}
                 src={screenshots[current].src}
@@ -88,7 +102,11 @@ function MacBookSlider() {
                 initial="enter"
                 animate="center"
                 exit="exit"
-                transition={{ duration: 0.45, ease: [0.32, 0.72, 0, 1] }}
+                transition={{
+                  x: { duration: 0.5, ease: elasticEase },
+                  scale: { duration: 0.5, ease: elasticEase },
+                  opacity: { duration: 0.3 },
+                }}
                 className="absolute inset-0 w-full h-full object-cover object-top"
                 draggable={false}
               />
@@ -119,11 +137,8 @@ function MacBookSlider() {
 
         {/* Keyboard base / hinge */}
         <div className="relative">
-          {/* Hinge strip */}
           <div className="h-[6px] bg-gradient-to-b from-[#2a2a2a] to-[#1f1f1f] rounded-b-[2px] mx-[2px] shadow-inner" />
-          {/* Base */}
           <div className="h-[10px] bg-gradient-to-b from-[#c0c0c0] to-[#a8a8a8] dark:from-[#303030] dark:to-[#252525] rounded-b-lg mx-auto shadow-md" style={{ width: '75%' }}>
-            {/* Trackpad indent */}
             <div className="absolute bottom-[2px] left-1/2 -translate-x-1/2 w-12 h-[3px] rounded-full bg-black/[0.08] dark:bg-white/[0.06]" />
           </div>
         </div>
@@ -167,102 +182,104 @@ export function Hero() {
         />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-5 sm:px-8 pt-16 sm:pt-24 lg:pt-28 pb-12 sm:pb-16">
-        {/* Text — centered above the MacBook */}
-        <motion.div
-          variants={stagger}
-          initial="initial"
-          animate="animate"
-          className="text-center max-w-3xl mx-auto mb-12 lg:mb-16"
-        >
-          {/* Badge */}
-          <motion.div variants={fadeUp} className="inline-flex mb-6">
-            <span className="relative inline-flex items-center gap-2 rounded-full border border-border/80 bg-muted/50 px-4 py-1.5 text-[12px] font-medium text-muted-foreground overflow-hidden">
-              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-[hsl(var(--primary)/0.08)] to-transparent animate-[shimmer_3s_infinite] -translate-x-full" />
-              <Zap className="h-3 w-3 text-[hsl(var(--primary))]" />
-              <span className="relative">Open Source &bull; Built for Indian Retail</span>
-            </span>
-          </motion.div>
-
-          {/* Heading */}
-          <motion.h1
-            variants={fadeUp}
-            className="font-display text-[40px] sm:text-[56px] lg:text-[64px] xl:text-[72px] font-[900] leading-[1.05] tracking-tight text-foreground mb-5"
-          >
-            Your store,
-            <br />
-            <span className="text-gradient-accent">supercharged.</span>
-          </motion.h1>
-
-          {/* Subheading */}
-          <motion.p
-            variants={fadeUp}
-            className="text-[16px] sm:text-[18px] text-muted-foreground leading-relaxed max-w-xl mx-auto mb-8"
-          >
-            Lightning-fast POS that works offline. GST compliant billing,
-            multi-terminal checkout, barcode scanning, and UPI payments —
-            everything your retail store needs.
-          </motion.p>
-
-          {/* CTAs */}
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-8 py-16 sm:py-24 lg:py-32">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr,1.1fr] gap-12 lg:gap-8 items-center">
+          {/* Left — Text */}
           <motion.div
-            variants={fadeUp}
-            className="flex flex-col sm:flex-row items-center gap-3 justify-center mb-6"
+            variants={stagger}
+            initial="initial"
+            animate="animate"
+            className="text-center lg:text-left"
           >
-            <a
-              href="https://pos.103.145.37.138.sslip.io/register"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center justify-center gap-2 h-12 px-7 rounded-xl text-[15px] font-semibold text-white bg-[hsl(var(--primary))] hover:opacity-90 transition-all duration-300 w-full sm:w-auto"
+            {/* Badge */}
+            <motion.div variants={fadeUp} className="inline-flex mb-6 lg:mb-8">
+              <span className="relative inline-flex items-center gap-2 rounded-full border border-border/80 bg-muted/50 px-4 py-1.5 text-[12px] font-medium text-muted-foreground overflow-hidden">
+                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-[hsl(var(--primary)/0.08)] to-transparent animate-[shimmer_3s_infinite] -translate-x-full" />
+                <Zap className="h-3 w-3 text-[hsl(var(--primary))]" />
+                <span className="relative">Open Source &bull; Built for Indian Retail</span>
+              </span>
+            </motion.div>
+
+            {/* Heading */}
+            <motion.h1
+              variants={fadeUp}
+              className="font-display text-[40px] sm:text-[56px] lg:text-[64px] xl:text-[72px] font-[900] leading-[1.05] tracking-tight text-foreground mb-5 lg:mb-6"
             >
-              Start Free
-              <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform duration-300" />
-            </a>
-            <a
-              href="https://pos.103.145.37.138.sslip.io"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center justify-center gap-2 h-12 px-7 rounded-xl text-[15px] font-semibold text-foreground border border-border hover:border-foreground/25 transition-all duration-300 w-full sm:w-auto"
+              Your store,
+              <br />
+              <span className="text-gradient-accent">supercharged.</span>
+            </motion.h1>
+
+            {/* Subheading */}
+            <motion.p
+              variants={fadeUp}
+              className="text-[16px] sm:text-[18px] text-muted-foreground leading-relaxed max-w-lg mx-auto lg:mx-0 mb-8 lg:mb-10"
             >
-              <Play className="h-4 w-4 fill-current" />
-              Live Demo
-            </a>
+              Lightning-fast POS that works offline. GST compliant billing,
+              multi-terminal checkout, barcode scanning, and UPI payments —
+              everything your retail store needs.
+            </motion.p>
+
+            {/* CTAs */}
+            <motion.div
+              variants={fadeUp}
+              className="flex flex-col sm:flex-row items-center gap-3 justify-center lg:justify-start mb-8"
+            >
+              <a
+                href="https://pos.103.145.37.138.sslip.io/register"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-center gap-2 h-12 px-7 rounded-xl text-[15px] font-semibold text-white bg-[hsl(var(--primary))] hover:opacity-90 transition-all duration-300 w-full sm:w-auto"
+              >
+                Start Free
+                <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform duration-300" />
+              </a>
+              <a
+                href="https://pos.103.145.37.138.sslip.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-center gap-2 h-12 px-7 rounded-xl text-[15px] font-semibold text-foreground border border-border hover:border-foreground/25 transition-all duration-300 w-full sm:w-auto"
+              >
+                <Play className="h-4 w-4 fill-current" />
+                Live Demo
+              </a>
+            </motion.div>
+
+            {/* Trust indicators */}
+            <motion.div
+              variants={fadeUp}
+              className="flex flex-wrap items-center gap-x-5 gap-y-2 justify-center lg:justify-start text-[12px] text-muted-foreground/60"
+            >
+              <span className="flex items-center gap-1.5">
+                <Shield className="h-3.5 w-3.5" />
+                No credit card required
+              </span>
+              <span className="flex items-center gap-1.5">
+                <Zap className="h-3.5 w-3.5" />
+                GST compliant
+              </span>
+              <span className="flex items-center gap-1.5">
+                <WifiOff className="h-3.5 w-3.5" />
+                Works offline
+              </span>
+            </motion.div>
           </motion.div>
 
-          {/* Trust indicators */}
+          {/* Right — MacBook with screenshot slider */}
           <motion.div
-            variants={fadeUp}
-            className="flex flex-wrap items-center gap-x-5 gap-y-2 justify-center text-[12px] text-muted-foreground/60"
+            initial={{ opacity: 0, scale: 0.92 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.9, delay: 0.3, ease: 'easeOut' as const }}
+            className="group relative"
           >
-            <span className="flex items-center gap-1.5">
-              <Shield className="h-3.5 w-3.5" />
-              No credit card required
-            </span>
-            <span className="flex items-center gap-1.5">
-              <Zap className="h-3.5 w-3.5" />
-              GST compliant
-            </span>
-            <span className="flex items-center gap-1.5">
-              <WifiOff className="h-3.5 w-3.5" />
-              Works offline
-            </span>
+            {/* Glow behind MacBook */}
+            <div className="absolute inset-0 -m-12 rounded-full bg-[hsl(var(--primary)/0.05)] blur-[80px] dark:bg-[hsl(var(--primary)/0.1)]" />
+
+            <div className="relative">
+              <MacBookSlider />
+            </div>
           </motion.div>
-        </motion.div>
-
-        {/* MacBook with screenshot slider */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.4, ease: 'easeOut' as const }}
-          className="group relative"
-        >
-          {/* Glow behind MacBook */}
-          <div className="absolute inset-0 -m-16 rounded-full bg-[hsl(var(--primary)/0.05)] blur-[100px] dark:bg-[hsl(var(--primary)/0.1)]" />
-
-          <div className="relative max-w-3xl mx-auto">
-            <MacBookSlider />
-          </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )
