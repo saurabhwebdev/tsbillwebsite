@@ -2,7 +2,6 @@ import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import {
   Check,
-  Github,
   Download,
   Headphones,
   ArrowRight,
@@ -10,6 +9,7 @@ import {
   Server,
   ShieldCheck,
 } from 'lucide-react'
+import { GithubIcon } from '@/components/icons/GithubIcon'
 
 function Reveal({
   children,
@@ -110,7 +110,7 @@ export function Pricing() {
             rel="noopener noreferrer"
             className="group flex items-center justify-center gap-3 py-3 px-5 rounded-xl border border-border bg-card hover:border-[hsl(var(--primary)/0.3)] hover:shadow-lg hover:shadow-[hsl(var(--primary)/0.04)] transition-all duration-300"
           >
-            <Github className="w-5 h-5 text-foreground" />
+            <GithubIcon className="w-5 h-5 text-foreground" />
             <span className="text-[14px] font-medium text-foreground">
               saurabhwebdev/swiftbill
             </span>
@@ -164,7 +164,7 @@ export function Pricing() {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 h-12 rounded-xl text-[15px] font-semibold text-foreground border border-border hover:border-foreground/25 transition-all duration-300 w-full"
               >
-                <Github className="w-4 h-4" />
+                <GithubIcon className="w-4 h-4" />
                 Download from GitHub
               </a>
             </div>

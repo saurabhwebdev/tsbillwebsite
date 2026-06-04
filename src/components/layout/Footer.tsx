@@ -2,22 +2,22 @@ import { Zap } from 'lucide-react'
 
 const footerLinks = {
   product: [
-    { label: 'Features', href: '#features' },
-    { label: 'Pricing', href: '#pricing' },
-    { label: 'Demo', href: 'https://pos.103.145.37.138.sslip.io' },
-    { label: 'Changelog', href: '#' },
+    { label: 'Features', href: '/#features' },
+    { label: 'Pricing', href: '/#pricing' },
+    { label: 'Demo', href: '/demo' },
+    { label: 'Changelog', href: '/changelog' },
   ],
   resources: [
-    { label: 'Documentation', href: '#' },
-    { label: 'API Reference', href: '#' },
+    { label: 'Documentation', href: '/docs' },
+    { label: 'API Reference', href: '/api-reference' },
     { label: 'GitHub', href: 'https://github.com/saurabhwebdev/swiftbill' },
-    { label: 'Support', href: '#contact' },
+    { label: 'Support', href: '/support' },
   ],
   company: [
-    { label: 'About', href: '#about' },
-    { label: 'Contact', href: '#contact' },
-    { label: 'Privacy', href: '#' },
-    { label: 'Terms', href: '#' },
+    { label: 'About', href: '/#about' },
+    { label: 'Contact', href: '/#contact' },
+    { label: 'Privacy', href: '/privacy' },
+    { label: 'Terms', href: '/terms' },
   ],
 }
 

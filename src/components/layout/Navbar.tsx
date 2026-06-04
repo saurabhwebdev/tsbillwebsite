@@ -5,10 +5,10 @@ import { ThemeToggle } from './ThemeToggle'
 import { cn } from '@/lib/utils'
 
 const navLinks = [
-  { label: 'Features', href: '#features' },
-  { label: 'Pricing', href: '#pricing' },
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Features', href: '/#features' },
+  { label: 'Pricing', href: '/#pricing' },
+  { label: 'About', href: '/#about' },
+  { label: 'Contact', href: '/#contact' },
 ]
 
 export function Navbar() {
@@ -76,7 +76,7 @@ export function Navbar() {
               Try Demo
             </a>
             <a
-              href="#pricing"
+              href="/#pricing"
               className="group flex items-center justify-center gap-2 h-10 px-5 rounded-xl text-[13px] font-semibold text-white bg-[hsl(var(--primary))] hover:opacity-90 transition-all duration-300"
             >
               Get Started
@@ -145,7 +145,7 @@ export function Navbar() {
                   Try Demo
                 </a>
                 <a
-                  href="#pricing"
+                  href="/#pricing"
                   onClick={() => setMobileOpen(false)}
                   className="flex items-center justify-center gap-2 h-12 rounded-xl text-[15px] font-semibold text-white bg-[hsl(var(--primary))] transition-all"
                 >

@@ -6,11 +6,11 @@ import {
   Send,
   Mail,
   MessageSquare,
-  Github,
   CheckCircle2,
   AlertCircle,
   Loader2,
 } from 'lucide-react'
+import { GithubIcon } from '@/components/icons/GithubIcon'
 
 function Reveal({
   children,
@@ -51,7 +51,7 @@ const contactMethods = [
     href: 'https://wa.me/919876543210',
   },
   {
-    icon: Github,
+    icon: GithubIcon,
     title: 'GitHub Issues',
     description: 'Found a bug? Report it on GitHub',
     value: 'Open an issue',
