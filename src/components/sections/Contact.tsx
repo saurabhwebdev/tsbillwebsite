@@ -40,8 +40,8 @@ const contactMethods = [
     icon: Mail,
     title: 'Email us',
     description: 'For general inquiries and support',
-    value: 'saurabh.thakur@unisonmining.com',
-    href: 'mailto:saurabh.thakur@unisonmining.com',
+    value: 'tsbill@gmail.com',
+    href: 'mailto:tsbill@gmail.com',
   },
   {
     icon: MessageSquare,

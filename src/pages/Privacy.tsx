@@ -90,7 +90,7 @@ We do not use any analytics platforms, advertising networks, or customer trackin
     title: 'Contact us',
     content: `If you have questions about this privacy policy or how we handle your data:
 
-• **Email:** saurabh.thakur@unisonmining.com
+• **Email:** tsbill@gmail.com
 • **GitHub:** https://github.com/saurabhwebdev/swiftbill/issues
 • **Address:** Happy Apps, India`,
   },

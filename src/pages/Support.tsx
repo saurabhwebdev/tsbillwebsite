@@ -62,7 +62,7 @@ const supportChannels = [
     description:
       'For detailed queries, setup help, or enterprise inquiries.',
     action: 'Send Email',
-    href: 'mailto:saurabh.thakur@unisonmining.com',
+    href: 'mailto:tsbill@gmail.com',
     badge: 'Detailed help',
   },
   {

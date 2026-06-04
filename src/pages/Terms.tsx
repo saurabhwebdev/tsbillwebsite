@@ -125,7 +125,7 @@ For significant changes, we will post a notice on our GitHub repository.`,
     title: 'Contact',
     content: `For questions about these terms:
 
-• **Email:** saurabh.thakur@unisonmining.com
+• **Email:** tsbill@gmail.com
 • **GitHub:** https://github.com/saurabhwebdev/swiftbill
 • **Entity:** Happy Apps, India`,
   },
