@@ -81,17 +81,36 @@ function MacBookSlider() {
       onMouseEnter={() => setIsAutoPlaying(false)}
       onMouseLeave={() => setIsAutoPlaying(true)}
     >
-      {/* MacBook body */}
+      {/* MacBook Pro */}
       <div className="relative mx-auto">
-        {/* Screen bezel */}
-        <div className="relative rounded-t-xl bg-[#1a1a1a] p-[6px] pb-[4px] shadow-2xl ring-1 ring-white/[0.08]">
-          {/* Camera notch */}
-          <div className="absolute top-[3px] left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-[#0a0a0a] ring-1 ring-white/[0.06] z-10 flex items-center justify-center">
-            <div className="w-1.5 h-1.5 rounded-full bg-[#1a2a1a]" />
+        {/* Lid / display assembly */}
+        <div
+          className="relative rounded-[12px] p-[8px] sm:p-[10px]"
+          style={{
+            background: 'linear-gradient(135deg, #2c2c2e 0%, #1c1c1e 50%, #2c2c2e 100%)',
+            boxShadow: '0 2px 0 0 rgba(255,255,255,0.06) inset, 0 -1px 0 0 rgba(0,0,0,0.4) inset, 0 8px 40px -8px rgba(0,0,0,0.5), 0 2px 12px -2px rgba(0,0,0,0.3)',
+          }}
+        >
+          {/* Top bezel with camera */}
+          <div className="flex items-center justify-center h-[14px] sm:h-[18px] mb-[2px]">
+            <div
+              className="w-[6px] h-[6px] sm:w-[8px] sm:h-[8px] rounded-full"
+              style={{
+                background: 'radial-gradient(circle at 40% 35%, #1a1e1a 0%, #0d0f0d 60%, #0a0a0a 100%)',
+                boxShadow: '0 0 0 1px rgba(255,255,255,0.05), 0 0 3px rgba(0,0,0,0.5) inset',
+              }}
+            />
           </div>
 
           {/* Screen */}
-          <div className="relative rounded-lg overflow-hidden bg-white dark:bg-[#0f0f0f] aspect-[16/10]">
+          <div
+            className="relative overflow-hidden bg-white dark:bg-[#0f0f0f]"
+            style={{
+              borderRadius: '4px',
+              aspectRatio: '16 / 10',
+              boxShadow: '0 0 0 1px rgba(0,0,0,0.6) inset',
+            }}
+          >
             <AnimatePresence initial={false} custom={direction} mode="sync">
               <motion.img
                 key={current}
@@ -111,6 +130,14 @@ function MacBookSlider() {
                 draggable={false}
               />
             </AnimatePresence>
+
+            {/* Screen reflection overlay */}
+            <div
+              className="absolute inset-0 pointer-events-none z-[5]"
+              style={{
+                background: 'linear-gradient(115deg, rgba(255,255,255,0.03) 0%, transparent 40%, transparent 60%, rgba(255,255,255,0.01) 100%)',
+              }}
+            />
 
             {/* Nav arrows */}
             <button
@@ -135,16 +162,50 @@ function MacBookSlider() {
           </div>
         </div>
 
-        {/* Keyboard base / hinge */}
+        {/* Hinge — the connecting strip between lid and base */}
+        <div
+          className="relative h-[6px] sm:h-[8px] mx-[3px]"
+          style={{
+            background: 'linear-gradient(to bottom, #0e0e0e 0%, #1a1a1a 30%, #2a2a2c 50%, #1a1a1a 70%, #0e0e0e 100%)',
+            borderRadius: '0 0 2px 2px',
+          }}
+        />
+
+        {/* Bottom base / keyboard deck */}
         <div className="relative">
-          <div className="h-[6px] bg-gradient-to-b from-[#2a2a2a] to-[#1f1f1f] rounded-b-[2px] mx-[2px] shadow-inner" />
-          <div className="h-[10px] bg-gradient-to-b from-[#c0c0c0] to-[#a8a8a8] dark:from-[#303030] dark:to-[#252525] rounded-b-lg mx-auto shadow-md" style={{ width: '75%' }}>
-            <div className="absolute bottom-[2px] left-1/2 -translate-x-1/2 w-12 h-[3px] rounded-full bg-black/[0.08] dark:bg-white/[0.06]" />
+          {/* Main base shape — wider than lid, tapered */}
+          <div
+            className="relative mx-auto h-[8px] sm:h-[11px]"
+            style={{
+              width: '108%',
+              marginLeft: '-4%',
+              background: 'linear-gradient(to bottom, #b8b8ba 0%, #a8a8aa 40%, #c0c0c2 60%, #d0d0d2 100%)',
+              borderRadius: '0 0 8px 8px',
+              boxShadow: '0 1px 0 0 rgba(255,255,255,0.3) inset, 0 -1px 2px rgba(0,0,0,0.15), 0 4px 12px -4px rgba(0,0,0,0.2)',
+            }}
+          >
+            {/* Front lip notch for opening */}
+            <div
+              className="absolute top-0 left-1/2 -translate-x-1/2 h-[3px] sm:h-[4px]"
+              style={{
+                width: '14%',
+                background: 'linear-gradient(to bottom, #8a8a8c 0%, #a0a0a2 100%)',
+                borderRadius: '0 0 4px 4px',
+              }}
+            />
           </div>
         </div>
 
-        {/* Shadow under laptop */}
-        <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[70%] h-6 bg-black/[0.08] dark:bg-black/20 blur-xl rounded-full" />
+        {/* Realistic shadow */}
+        <div
+          className="absolute left-1/2 -translate-x-1/2 -bottom-3 sm:-bottom-5 pointer-events-none"
+          style={{
+            width: '90%',
+            height: '20px',
+            background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.06) 50%, transparent 80%)',
+            filter: 'blur(6px)',
+          }}
+        />
       </div>
 
       {/* Dot indicators */}
