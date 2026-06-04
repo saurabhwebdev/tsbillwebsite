@@ -1,3 +1,4 @@
+import { useSEO } from '@/hooks/useSEO'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { Shield, ArrowRight } from 'lucide-react'
@@ -28,7 +29,7 @@ function Reveal({
 const sections = [
   {
     title: 'What information we collect',
-    content: `When you use our website (swiftbill.in), we may collect:
+    content: `When you use our website (tsbill.xyz), we may collect:
 
 • **Contact form data** — your name, email address, and message when you reach out to us through the contact form.
 • **Basic analytics** — anonymous page views and visit counts to understand how people use our website. We do not track individual users.
@@ -97,6 +98,11 @@ We do not use any analytics platforms, advertising networks, or customer trackin
 ]
 
 export function Privacy() {
+  useSEO({
+    title: 'Privacy Policy — SwiftBill POS',
+    description: 'SwiftBill privacy policy. Your shop data stays on your server. We don\'t track users, sell data, or use advertising cookies.',
+    canonical: 'https://tsbill.xyz/privacy',
+  })
   return (
     <div className="min-h-screen overflow-hidden">
       <section className="relative pt-12 pb-16 sm:pt-20 sm:pb-24">

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useSEO } from '@/hooks/useSEO'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import {
@@ -151,6 +152,11 @@ const faq = [
 ]
 
 export function Documentation() {
+  useSEO({
+    title: 'Documentation — SwiftBill POS Setup & User Guide',
+    description: 'Complete guide to install, configure, and use SwiftBill POS. Step-by-step tutorials for billing, inventory, products, reports, user roles, and security.',
+    canonical: 'https://tsbill.xyz/docs',
+  })
   const [searchQuery, setSearchQuery] = useState('')
   const [openFaq, setOpenFaq] = useState<number | null>(null)
 

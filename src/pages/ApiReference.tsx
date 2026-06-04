@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useSEO } from '@/hooks/useSEO'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import {
@@ -272,6 +273,11 @@ const apiGroups = [
 ]
 
 export function ApiReference() {
+  useSEO({
+    title: 'API Reference — SwiftBill REST API Documentation',
+    description: 'Full REST API documentation for SwiftBill POS. Endpoints for products, sales, inventory, reports, authentication, and settings with request/response examples.',
+    canonical: 'https://tsbill.xyz/api-reference',
+  })
   const [openGroup, setOpenGroup] = useState<string | null>(
     'Authentication',
   )

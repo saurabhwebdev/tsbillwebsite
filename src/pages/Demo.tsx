@@ -1,3 +1,4 @@
+import { useSEO } from '@/hooks/useSEO'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import {
@@ -79,6 +80,11 @@ const walkthrough = [
 ]
 
 export function Demo() {
+  useSEO({
+    title: 'Live Demo — SwiftBill POS | Try Free Online',
+    description: 'Try SwiftBill POS live in your browser. No signup needed. Explore billing, inventory, reports, and all features with our interactive demo.',
+    canonical: 'https://tsbill.xyz/demo',
+  })
   return (
     <div className="min-h-screen overflow-hidden">
       {/* Hero */}

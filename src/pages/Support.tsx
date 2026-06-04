@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useSEO } from '@/hooks/useSEO'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import {
@@ -138,6 +139,11 @@ const supportTiers = [
 ]
 
 export function Support() {
+  useSEO({
+    title: 'Support — SwiftBill POS Help Center & FAQ',
+    description: 'Get help with SwiftBill POS. Browse common issues, troubleshooting guides, and contact our support team via WhatsApp, email, or GitHub.',
+    canonical: 'https://tsbill.xyz/support',
+  })
   const [searchQuery, setSearchQuery] = useState('')
   const [openFaq, setOpenFaq] = useState<number | null>(null)
 

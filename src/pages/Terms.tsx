@@ -1,3 +1,4 @@
+import { useSEO } from '@/hooks/useSEO'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { FileText, ArrowRight } from 'lucide-react'
@@ -77,7 +78,7 @@ Paid services are non-refundable once work has commenced. If we are unable to co
   },
   {
     title: 'Website usage',
-    content: `This website (swiftbill.in) is provided for informational purposes. By using this website:
+    content: `This website (tsbill.xyz) is provided for informational purposes. By using this website:
 
 • You agree not to use the contact form for spam, harassment, or illegal purposes.
 • You acknowledge that the demo environment is shared and resets periodically — do not enter real business data.
@@ -132,6 +133,11 @@ For significant changes, we will post a notice on our GitHub repository.`,
 ]
 
 export function Terms() {
+  useSEO({
+    title: 'Terms of Service — SwiftBill POS',
+    description: 'SwiftBill terms of service. Free, open-source MIT-licensed POS software. Your responsibilities, our paid services, and legal terms explained simply.',
+    canonical: 'https://tsbill.xyz/terms',
+  })
   return (
     <div className="min-h-screen overflow-hidden">
       <section className="relative pt-12 pb-16 sm:pt-20 sm:pb-24">

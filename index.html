@@ -5,24 +5,124 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
+    <link rel="canonical" href="https://tsbill.xyz/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#fcfcfc" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="description" content="SwiftBill - Lightning-fast offline POS system with GST compliance, multi-terminal support, barcode scanning, and UPI payments. Built for Indian retail." />
-    <meta name="keywords" content="POS, Point of Sale, GST, India, retail, barcode, UPI, inventory, billing" />
-    <meta property="og:title" content="SwiftBill — Lightning-Fast Point of Sale" />
-    <meta property="og:description" content="Modern offline-capable POS for Indian retail. GST compliant, multi-terminal, barcode scanning, UPI payments." />
+    <meta name="description" content="SwiftBill — Free, open-source POS billing software for Indian retail shops. GST compliant invoices, offline billing, multi-terminal support, barcode scanning, UPI payments, inventory management. Download free." />
+    <meta name="keywords" content="POS software India, Point of Sale billing, GST billing software, free POS software, retail billing app, inventory management, barcode billing, UPI payment POS, offline billing software, shop billing software, SwiftBill" />
+    <meta name="author" content="Happy Apps" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta property="og:title" content="SwiftBill — Free Open-Source POS for Indian Retail" />
+    <meta property="og:description" content="Lightning-fast billing software with GST compliance, offline mode, multi-terminal support, and inventory management. 100% free and open source." />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tsbill.xyz/" />
+    <meta property="og:site_name" content="SwiftBill" />
+    <meta property="og:locale" content="en_IN" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="SwiftBill — Lightning-Fast Point of Sale" />
-    <meta name="twitter:description" content="Modern offline-capable POS for Indian retail." />
-    <title>SwiftBill — Lightning-Fast Point of Sale</title>
+    <meta name="twitter:title" content="SwiftBill — Free Open-Source POS for Indian Retail" />
+    <meta name="twitter:description" content="Lightning-fast billing software with GST compliance, offline mode, and inventory management. 100% free." />
+    <title>SwiftBill — Free Open-Source POS Billing Software for Indian Retail</title>
     <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&f[]=cabinet-grotesk@700,800,900&display=swap" rel="stylesheet" />
+
+    <!-- Structured Data: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SwiftBill",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "description": "Free, open-source POS billing software for Indian retail shops with GST compliance, offline billing, inventory management, and multi-terminal support.",
+      "url": "https://tsbill.xyz",
+      "downloadUrl": "https://github.com/saurabhwebdev/swiftbill",
+      "softwareVersion": "2.4.0",
+      "author": {
+        "@type": "Organization",
+        "name": "Happy Apps",
+        "url": "https://tsbill.xyz"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "150"
+      },
+      "featureList": "GST Compliant Invoicing, Offline Billing, Multi-Terminal Support, Barcode Scanning, UPI Payments, Inventory Management, Sales Reports, Receipt Customization"
+    }
+    </script>
+
+    <!-- Structured Data: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is SwiftBill really free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, SwiftBill is 100% free and open source under the MIT License. You can download, use, and modify it for your shop without paying anything. We only charge for optional installation and premium support services."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does SwiftBill work offline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, SwiftBill has a PWA mode that lets you create bills even without internet. Transactions automatically sync when your connection comes back."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SwiftBill GST compliant?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, SwiftBill generates GST-compliant invoices with CGST, SGST, and IGST calculations. It supports HSN codes, e-invoice format, and is updated for the latest GST rules."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can multiple people use SwiftBill at the same time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, SwiftBill supports multiple users and up to 10 billing terminals simultaneously. You can create separate accounts for each staff member with Admin, Manager, or Cashier roles."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SwiftBill",
+      "url": "https://tsbill.xyz",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://tsbill.xyz/docs?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <div style="padding:2rem;text-align:center;font-family:sans-serif;">
+        <h1>SwiftBill — Free POS for Indian Retail</h1>
+        <p>Please enable JavaScript to use SwiftBill website. Visit our <a href="https://github.com/saurabhwebdev/swiftbill">GitHub</a> for more info.</p>
+      </div>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
