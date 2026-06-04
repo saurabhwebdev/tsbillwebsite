@@ -2,12 +2,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { Hero } from '@/components/sections/Hero'
+import { Features } from '@/components/sections/Features'
 
 function Home() {
   return (
     <>
       <Hero />
-      {/* More sections: Features, Pricing, About, Contact will go here */}
+      <Features />
     </>
   )
 }
