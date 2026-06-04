@@ -161,7 +161,7 @@ export function About() {
           <Reveal className="text-center max-w-2xl mx-auto">
             <h3 className="font-display text-[26px] sm:text-[32px] lg:text-[36px] font-[800] leading-[1.15] tracking-tight text-foreground mb-4">
               Built by{' '}
-              <span className="text-gradient-accent">Unison Apps</span>
+              <span className="text-gradient-accent">Happy Apps</span>
             </h3>
             <p className="text-[15px] sm:text-[17px] text-muted-foreground leading-relaxed mb-4">
               We're a small team of developers and designers from India who

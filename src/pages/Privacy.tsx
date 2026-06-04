@@ -92,7 +92,7 @@ We do not use any analytics platforms, advertising networks, or customer trackin
 
 • **Email:** saurabh.thakur@unisonmining.com
 • **GitHub:** https://github.com/saurabhwebdev/swiftbill/issues
-• **Address:** Unison Apps, India`,
+• **Address:** Happy Apps, India`,
   },
 ]
 

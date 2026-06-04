@@ -84,7 +84,7 @@ export function Footer() {
         <div className="h-px bg-gradient-to-r from-transparent via-border/60 to-transparent" />
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 py-6">
           <p className="text-[12px] text-muted-foreground/60">
-            &copy; {new Date().getFullYear()} Unison Apps. All rights reserved.
+            &copy; {new Date().getFullYear()} Happy Apps. All rights reserved.
           </p>
           <p className="text-[12px] text-muted-foreground/40">
             Built with React + Django

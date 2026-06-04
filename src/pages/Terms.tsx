@@ -86,8 +86,8 @@ Paid services are non-refundable once work has commenced. If we are unable to co
   {
     title: 'Intellectual property',
     content: `• The SwiftBill source code is open-source under the MIT License.
-• The SwiftBill name, logo, and website design are the property of Unison Apps. You may not use these to represent your own product without written permission.
-• Screenshots, documentation text, and marketing copy on this website are copyrighted by Unison Apps.
+• The SwiftBill name, logo, and website design are the property of Happy Apps. You may not use these to represent your own product without written permission.
+• Screenshots, documentation text, and marketing copy on this website are copyrighted by Happy Apps.
 • Contributions to the SwiftBill repository on GitHub are subject to the repository's license terms.`,
   },
   {
@@ -102,7 +102,7 @@ We are not responsible for the availability, terms, or policies of third-party s
   },
   {
     title: 'Limitation of liability',
-    content: `To the maximum extent permitted by law, Unison Apps and its contributors shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:
+    content: `To the maximum extent permitted by law, Happy Apps and its contributors shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:
 
 • Loss of profits or revenue
 • Loss of data or business information
@@ -127,7 +127,7 @@ For significant changes, we will post a notice on our GitHub repository.`,
 
 • **Email:** saurabh.thakur@unisonmining.com
 • **GitHub:** https://github.com/saurabhwebdev/swiftbill
-• **Entity:** Unison Apps, India`,
+• **Entity:** Happy Apps, India`,
   },
 ]
 
