@@ -84,6 +84,10 @@ export function Demo() {
     title: 'Live Demo — SwiftBill POS | Try Free Online',
     description: 'Try SwiftBill POS live in your browser. No signup needed. Explore billing, inventory, reports, and all features with our interactive demo.',
     canonical: 'https://tsbill.xyz/demo',
+    breadcrumbs: [
+      { name: 'Home', url: 'https://tsbill.xyz/' },
+      { name: 'Demo', url: 'https://tsbill.xyz/demo' },
+    ],
   })
   return (
     <div className="min-h-screen overflow-hidden">

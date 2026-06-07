@@ -102,6 +102,10 @@ export function Privacy() {
     title: 'Privacy Policy — SwiftBill POS',
     description: 'SwiftBill privacy policy. Your shop data stays on your server. We don\'t track users, sell data, or use advertising cookies.',
     canonical: 'https://tsbill.xyz/privacy',
+    breadcrumbs: [
+      { name: 'Home', url: 'https://tsbill.xyz/' },
+      { name: 'Privacy Policy', url: 'https://tsbill.xyz/privacy' },
+    ],
   })
   return (
     <div className="min-h-screen overflow-hidden">

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>SwiftBill Blog — POS Billing, GST, and Indian Retail</title>
+    <link>https://tsbill.xyz/blog</link>
+    <description>Expert guides on POS billing, GST compliance, inventory management, and retail technology for Indian businesses. By SwiftBill — free, open-source billing software.</description>
+    <language>en-in</language>
+    <managingEditor>theswiftbill@gmail.com (SwiftBill)</managingEditor>
+    <webMaster>theswiftbill@gmail.com (SwiftBill)</webMaster>
+    <lastBuildDate>Sat, 07 Jun 2026 00:00:00 +0530</lastBuildDate>
+    <atom:link href="https://tsbill.xyz/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://tsbill.xyz/apple-touch-icon.png</url>
+      <title>SwiftBill Blog</title>
+      <link>https://tsbill.xyz/blog</link>
+    </image>
+
+    <item>
+      <title>Best Free POS Billing Software for Indian Retail Shops in 2026</title>
+      <link>https://tsbill.xyz/blog/free-pos-billing-software-india-2026</link>
+      <guid isPermaLink="true">https://tsbill.xyz/blog/free-pos-billing-software-india-2026</guid>
+      <description>A comprehensive guide to choosing free point-of-sale billing software for your Indian retail business — features, GST compliance, offline support, and why open source wins.</description>
+      <dc:creator>SwiftBill</dc:creator>
+      <category>Guide</category>
+      <pubDate>Sun, 07 Jun 2026 00:00:00 +0530</pubDate>
+    </item>
+
+    <item>
+      <title>GST Billing Compliance Guide for Small Businesses in India (2026)</title>
+      <link>https://tsbill.xyz/blog/gst-billing-compliance-guide-small-business</link>
+      <guid isPermaLink="true">https://tsbill.xyz/blog/gst-billing-compliance-guide-small-business</guid>
+      <description>Everything Indian small business owners need to know about GST-compliant billing — tax slabs, HSN codes, invoice formats, GSTR-1 filing, and how to automate it all.</description>
+      <dc:creator>SwiftBill</dc:creator>
+      <category>GST Guide</category>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 +0530</pubDate>
+    </item>
+
+    <item>
+      <title>Why Offline POS Billing Matters for Indian Retail in 2026</title>
+      <link>https://tsbill.xyz/blog/offline-pos-billing-why-it-matters</link>
+      <guid isPermaLink="true">https://tsbill.xyz/blog/offline-pos-billing-why-it-matters</guid>
+      <description>Internet outages cost Indian retailers thousands in lost sales every month. Here's why offline-first billing software is essential and how to set it up.</description>
+      <dc:creator>SwiftBill</dc:creator>
+      <category>Technology</category>
+      <pubDate>Wed, 03 Jun 2026 00:00:00 +0530</pubDate>
+    </item>
+
+    <item>
+      <title>How to Digitize Your Kirana Store: A Complete 2026 Guide</title>
+      <link>https://tsbill.xyz/blog/kirana-store-digital-transformation-guide</link>
+      <guid isPermaLink="true">https://tsbill.xyz/blog/kirana-store-digital-transformation-guide</guid>
+      <description>Step-by-step guide for kirana store owners to go digital — from billing software to inventory management, UPI payments, and customer loyalty programs.</description>
+      <dc:creator>SwiftBill</dc:creator>
+      <category>Business</category>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 +0530</pubDate>
+    </item>
+
+    <item>
+      <title>Open Source POS vs. Commercial POS: An Honest Comparison for 2026</title>
+      <link>https://tsbill.xyz/blog/open-source-pos-vs-commercial-comparison</link>
+      <guid isPermaLink="true">https://tsbill.xyz/blog/open-source-pos-vs-commercial-comparison</guid>
+      <description>Should you choose open-source or commercial POS software? We compare cost, features, security, support, and long-term viability for Indian businesses.</description>
+      <dc:creator>SwiftBill</dc:creator>
+      <category>Comparison</category>
+      <pubDate>Thu, 28 May 2026 00:00:00 +0530</pubDate>
+    </item>
+
+    <item>
+      <title>10 Inventory Management Tips Every Small Indian Retailer Should Know</title>
+      <link>https://tsbill.xyz/blog/inventory-management-tips-small-retailers</link>
+      <guid isPermaLink="true">https://tsbill.xyz/blog/inventory-management-tips-small-retailers</guid>
+      <description>Practical inventory management strategies for Indian retail shops — from ABC analysis to reorder points, demand forecasting, and reducing dead stock.</description>
+      <dc:creator>SwiftBill</dc:creator>
+      <category>Tips</category>
+      <pubDate>Mon, 25 May 2026 00:00:00 +0530</pubDate>
+    </item>
+
+  </channel>
+</rss>

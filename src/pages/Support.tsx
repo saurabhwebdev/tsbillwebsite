@@ -143,6 +143,11 @@ export function Support() {
     title: 'Support — SwiftBill POS Help Center & FAQ',
     description: 'Get help with SwiftBill POS. Browse common issues, troubleshooting guides, and contact our support team via WhatsApp, email, or GitHub.',
     canonical: 'https://tsbill.xyz/support',
+    breadcrumbs: [
+      { name: 'Home', url: 'https://tsbill.xyz/' },
+      { name: 'Support', url: 'https://tsbill.xyz/support' },
+    ],
+    faq: commonIssues.map(i => ({ question: i.q, answer: i.a })),
   })
   const [searchQuery, setSearchQuery] = useState('')
   const [openFaq, setOpenFaq] = useState<number | null>(null)

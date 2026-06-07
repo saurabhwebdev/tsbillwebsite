@@ -137,6 +137,10 @@ export function Terms() {
     title: 'Terms of Service — SwiftBill POS',
     description: 'SwiftBill terms of service. Free, open-source MIT-licensed POS software. Your responsibilities, our paid services, and legal terms explained simply.',
     canonical: 'https://tsbill.xyz/terms',
+    breadcrumbs: [
+      { name: 'Home', url: 'https://tsbill.xyz/' },
+      { name: 'Terms of Service', url: 'https://tsbill.xyz/terms' },
+    ],
   })
   return (
     <div className="min-h-screen overflow-hidden">

@@ -1,5 +1,6 @@
 import { lazy, Suspense, useEffect } from 'react'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { useSEO } from '@/hooks/useSEO'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { Hero } from '@/components/sections/Hero'
@@ -16,6 +17,7 @@ const Support = lazy(() => import('@/pages/Support').then((m) => ({ default: m.S
 const Privacy = lazy(() => import('@/pages/Privacy').then((m) => ({ default: m.Privacy })))
 const Terms = lazy(() => import('@/pages/Terms').then((m) => ({ default: m.Terms })))
 const Blog = lazy(() => import('@/pages/Blog').then((m) => ({ default: m.Blog })))
+const NotFound = lazy(() => import('@/pages/NotFound').then((m) => ({ default: m.NotFound })))
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -26,6 +28,12 @@ function ScrollToTop() {
 }
 
 function Home() {
+  useSEO({
+    title: 'SwiftBill — Free Open-Source POS Billing Software for Indian Retail',
+    description: 'Lightning-fast billing software with GST compliance, offline mode, multi-terminal support, barcode scanning, UPI payments, and inventory management. 100% free and open source.',
+    canonical: 'https://tsbill.xyz/',
+    breadcrumbs: [{ name: 'Home', url: 'https://tsbill.xyz/' }],
+  })
   return (
     <>
       <Hero />
@@ -63,6 +71,7 @@ function App() {
             <Route path="/terms" element={<Terms />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<Blog />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
       </main>

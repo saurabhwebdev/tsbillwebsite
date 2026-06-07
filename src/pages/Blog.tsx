@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useSEO } from '@/hooks/useSEO'
 
 const blogPosts = [
   {
@@ -497,6 +497,24 @@ function BlogPostCard({ post }: { post: typeof blogPosts[0] }) {
   )
 }
 
+function RelatedPosts({ currentSlug }: { currentSlug: string }) {
+  const related = blogPosts.filter(p => p.slug !== currentSlug).slice(0, 3)
+  return (
+    <div className="mt-12 pt-8 border-t border-border/50">
+      <h3 className="text-lg font-bold text-foreground mb-5">Related Articles</h3>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {related.map(p => (
+          <a key={p.slug} href={`/blog/${p.slug}`} className="group p-4 rounded-xl border border-border/50 hover:border-border transition-colors">
+            <span className="text-[11px] font-semibold text-[hsl(var(--primary))] uppercase tracking-wide">{p.category}</span>
+            <h4 className="text-[14px] font-semibold text-foreground mt-1 leading-snug group-hover:text-[hsl(var(--primary))] transition-colors">{p.title}</h4>
+            <span className="text-[12px] text-muted-foreground mt-2 block">{p.readTime}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 function BlogPostFull({ post }: { post: typeof blogPosts[0] }) {
   return (
     <article className="max-w-3xl mx-auto">
@@ -548,6 +566,7 @@ function BlogPostFull({ post }: { post: typeof blogPosts[0] }) {
           </div>
         </div>
       </div>
+      <RelatedPosts currentSlug={post.slug} />
     </article>
   )
 }
@@ -557,17 +576,31 @@ export function Blog() {
   const slug = path.replace('/blog/', '').replace('/blog', '')
   const post = slug ? blogPosts.find(p => p.slug === slug) : null
 
-  useEffect(() => {
-    if (post) {
-      document.title = `${post.title} — SwiftBill Blog`
-      const metaDesc = document.querySelector('meta[name="description"]')
-      if (metaDesc) metaDesc.setAttribute('content', post.excerpt)
-    } else {
-      document.title = 'Blog — SwiftBill | Free POS Billing Software for Indian Retail'
-      const metaDesc = document.querySelector('meta[name="description"]')
-      if (metaDesc) metaDesc.setAttribute('content', 'Expert guides on POS billing, GST compliance, inventory management, and retail technology for Indian businesses. By SwiftBill — free, open-source billing software.')
-    }
-  }, [post])
+  useSEO(post ? {
+    title: `${post.title} — SwiftBill Blog`,
+    description: post.excerpt,
+    canonical: `https://tsbill.xyz/blog/${post.slug}`,
+    type: 'article',
+    article: {
+      publishedTime: post.date,
+      author: 'SwiftBill',
+      section: post.category,
+      tags: post.keywords,
+    },
+    breadcrumbs: [
+      { name: 'Home', url: 'https://tsbill.xyz/' },
+      { name: 'Blog', url: 'https://tsbill.xyz/blog' },
+      { name: post.title, url: `https://tsbill.xyz/blog/${post.slug}` },
+    ],
+  } : {
+    title: 'Blog — SwiftBill | Free POS Billing Software for Indian Retail',
+    description: 'Expert guides on POS billing, GST compliance, inventory management, and retail technology for Indian businesses. By SwiftBill — free, open-source billing software.',
+    canonical: 'https://tsbill.xyz/blog',
+    breadcrumbs: [
+      { name: 'Home', url: 'https://tsbill.xyz/' },
+      { name: 'Blog', url: 'https://tsbill.xyz/blog' },
+    ],
+  })
 
   if (post) {
     return (

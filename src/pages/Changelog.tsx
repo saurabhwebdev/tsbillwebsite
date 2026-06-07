@@ -164,6 +164,10 @@ export function Changelog() {
     title: 'Changelog — SwiftBill POS Updates & New Features',
     description: 'See every update, new feature, and bug fix in SwiftBill POS. Multi-terminal support, demand analytics, GST 2.0 compliance, offline mode, and more.',
     canonical: 'https://tsbill.xyz/changelog',
+    breadcrumbs: [
+      { name: 'Home', url: 'https://tsbill.xyz/' },
+      { name: 'Changelog', url: 'https://tsbill.xyz/changelog' },
+    ],
   })
   return (
     <div className="min-h-screen overflow-hidden">

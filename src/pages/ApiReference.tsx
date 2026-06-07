@@ -277,6 +277,11 @@ export function ApiReference() {
     title: 'API Reference — SwiftBill REST API Documentation',
     description: 'Full REST API documentation for SwiftBill POS. Endpoints for products, sales, inventory, reports, authentication, and settings with request/response examples.',
     canonical: 'https://tsbill.xyz/api-reference',
+    breadcrumbs: [
+      { name: 'Home', url: 'https://tsbill.xyz/' },
+      { name: 'Documentation', url: 'https://tsbill.xyz/docs' },
+      { name: 'API Reference', url: 'https://tsbill.xyz/api-reference' },
+    ],
   })
   const [openGroup, setOpenGroup] = useState<string | null>(
     'Authentication',

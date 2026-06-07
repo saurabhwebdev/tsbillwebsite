@@ -156,6 +156,11 @@ export function Documentation() {
     title: 'Documentation — SwiftBill POS Setup & User Guide',
     description: 'Complete guide to install, configure, and use SwiftBill POS. Step-by-step tutorials for billing, inventory, products, reports, user roles, and security.',
     canonical: 'https://tsbill.xyz/docs',
+    breadcrumbs: [
+      { name: 'Home', url: 'https://tsbill.xyz/' },
+      { name: 'Documentation', url: 'https://tsbill.xyz/docs' },
+    ],
+    faq: faq.map(f => ({ question: f.q, answer: f.a })),
   })
   const [searchQuery, setSearchQuery] = useState('')
   const [openFaq, setOpenFaq] = useState<number | null>(null)
