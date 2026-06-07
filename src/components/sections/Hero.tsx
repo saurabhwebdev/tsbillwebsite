@@ -104,7 +104,7 @@ function MacBookSlider() {
 
           {/* Screen */}
           <div
-            className="relative overflow-hidden bg-white dark:bg-[#0f0f0f]"
+            className="relative overflow-hidden bg-[#0c0820]"
             style={{
               borderRadius: '4px',
               aspectRatio: '16 / 10',

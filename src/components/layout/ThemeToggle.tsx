@@ -7,9 +7,8 @@ export function ThemeToggle() {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('sb-theme')
       if (saved) return saved === 'dark'
-      return window.matchMedia('(prefers-color-scheme: dark)').matches
     }
-    return false
+    return true
   })
 
   useEffect(() => {

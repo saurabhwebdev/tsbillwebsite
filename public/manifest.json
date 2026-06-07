@@ -4,7 +4,7 @@
   "description": "Modern offline-capable Point of Sale system for Indian retail businesses",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#fcfcfc",
+  "background_color": "#0c0820",
   "theme_color": "#6366f1",
   "orientation": "any",
   "categories": ["business", "finance", "productivity"],
