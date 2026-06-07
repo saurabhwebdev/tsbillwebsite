@@ -40,8 +40,8 @@ const contactMethods = [
     icon: Mail,
     title: 'Email us',
     description: 'For general inquiries and support',
-    value: 'tsbill@gmail.com',
-    href: 'mailto:tsbill@gmail.com',
+    value: 'theswiftbill@gmail.com',
+    href: 'mailto:theswiftbill@gmail.com',
   },
   {
     icon: MessageSquare,

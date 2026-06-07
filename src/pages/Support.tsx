@@ -63,7 +63,7 @@ const supportChannels = [
     description:
       'For detailed queries, setup help, or enterprise inquiries.',
     action: 'Send Email',
-    href: 'mailto:tsbill@gmail.com',
+    href: 'mailto:theswiftbill@gmail.com',
     badge: 'Detailed help',
   },
   {

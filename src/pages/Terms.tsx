@@ -126,7 +126,7 @@ For significant changes, we will post a notice on our GitHub repository.`,
     title: 'Contact',
     content: `For questions about these terms:
 
-• **Email:** tsbill@gmail.com
+• **Email:** theswiftbill@gmail.com
 • **GitHub:** https://github.com/saurabhwebdev/swiftbill
 • **Entity:** Happy Apps, India`,
   },
