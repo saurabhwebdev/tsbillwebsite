@@ -10,6 +10,7 @@ const footerLinks = {
   resources: [
     { label: 'Documentation', href: '/docs' },
     { label: 'API Reference', href: '/api-reference' },
+    { label: 'Blog', href: '/blog' },
     { label: 'GitHub', href: 'https://github.com/saurabhwebdev/swiftbill' },
     { label: 'Support', href: '/support' },
   ],

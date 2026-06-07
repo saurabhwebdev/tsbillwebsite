@@ -15,6 +15,7 @@ const ApiReference = lazy(() => import('@/pages/ApiReference').then((m) => ({ de
 const Support = lazy(() => import('@/pages/Support').then((m) => ({ default: m.Support })))
 const Privacy = lazy(() => import('@/pages/Privacy').then((m) => ({ default: m.Privacy })))
 const Terms = lazy(() => import('@/pages/Terms').then((m) => ({ default: m.Terms })))
+const Blog = lazy(() => import('@/pages/Blog').then((m) => ({ default: m.Blog })))
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -60,6 +61,8 @@ function App() {
             <Route path="/support" element={<Support />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<Blog />} />
           </Routes>
         </Suspense>
       </main>
